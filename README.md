@@ -1,7 +1,9 @@
 # NoSprint
 
 [![Discord](https://img.shields.io/discord/830063409000087612?color=7389D8&label=discord)](https://discord.com/invite/EggNF9hvGv)
+[![GitHub license](https://img.shields.io/github/license/AIPTU/NoSprint.svg)](https://github.com/AIPTU/NoSprint/blob/master/LICENSE)
 [![Poggit-CI](https://poggit.pmmp.io/ci.shield/AIPTU/NoSprint/NoSprint)](https://poggit.pmmp.io/ci/AIPTU/NoSprint/NoSprint)
+[![](https://poggit.pmmp.io/shield.dl/NoSprint)](https://poggit.pmmp.io/p/NoSprint)
 
 A PocketMine-MP plugin to cancel the player's spint.
 
@@ -33,7 +35,7 @@ blacklisted-worlds:
 
 # How to Install
 
-1. Download the plugin from [here](https://poggit.pmmp.io/ci/AIPTU/NoSprint)
+1. Download the plugin from [here](https://poggit.pmmp.io/p/NoSprint)
 2. Put the `NoSprint.phar` file into the `plugins` folder.
 3. Restart the server.
 4. Done!
