@@ -2,6 +2,7 @@
 
 [![Discord](https://img.shields.io/discord/830063409000087612?color=7389D8&label=discord)](https://discord.com/invite/EggNF9hvGv)
 [![GitHub license](https://img.shields.io/github/license/AIPTU/NoSprint.svg)](https://github.com/AIPTU/NoSprint/blob/master/LICENSE)
+[![Poggit-CI](https://poggit.pmmp.io/ci.shield/AIPTU/NoSprint/NoSprint)](https://poggit.pmmp.io/ci/AIPTU/NoSprint/NoSprint)
 
 A PocketMine-MP plugin to cancel the player's spint.
 
