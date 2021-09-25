@@ -1,7 +1,6 @@
 # NoSprint
 
 [![Discord](https://img.shields.io/discord/830063409000087612?color=7389D8&label=discord)](https://discord.com/invite/EggNF9hvGv)
-[![GitHub license](https://img.shields.io/github/license/AIPTU/NoSprint.svg)](https://github.com/AIPTU/NoSprint/blob/master/LICENSE)
 [![Poggit-CI](https://poggit.pmmp.io/ci.shield/AIPTU/NoSprint/NoSprint)](https://poggit.pmmp.io/ci/AIPTU/NoSprint/NoSprint)
 
 A PocketMine-MP plugin to cancel the player's spint.
@@ -12,6 +11,21 @@ A PocketMine-MP plugin to cancel the player's spint.
 - Custom messages.
 - Per world support.
 - Lightweight and open source ❤️
+
+# Config
+
+```yaml
+---
+# Message to be used when canceling a player's sprint
+# You can use "&" or "§" to color the message
+message: "&cYou can't sprint in this world"
+
+# The name of the world folder that you want to cancel the player's sprint
+# Leave this blank if you don't want to cancel the player's sprint
+blacklisted-worlds:
+  - "world"
+...
+```
 
 # Permissions
 
