@@ -1,0 +1,10 @@
+---
+# Message to be used when canceling a player's sprint
+# You can use "&" or "§" to color the message
+message: "&cYou can't sprint in this world"
+
+# The name of the world folder that you want to cancel the player's sprint
+# Leave this blank if you don't want to cancel the player's sprint
+blacklisted-worlds:
+  - "world"
+...

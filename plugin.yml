@@ -1,0 +1,11 @@
+---
+name: NoSprint
+main: aiptu\nosprint\NoSprint
+version: 1.0.0
+api: [3.21.0]
+author: AIPTU
+permissions:
+  nosprint.bypass:
+    default: op 
+    description: Allows the user to bypass sprint
+...
