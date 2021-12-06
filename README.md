@@ -1,15 +1,15 @@
 # NoSprint
 
 [![Discord](https://img.shields.io/discord/830063409000087612?color=7389D8&label=discord)](https://discord.com/invite/EggNF9hvGv)
-[![GitHub license](https://img.shields.io/github/license/AIPTU/NoSprint.svg)](https://github.com/AIPTU/NoSprint/blob/master/LICENSE)
-[![Poggit-CI](https://poggit.pmmp.io/ci.shield/AIPTU/NoSprint/NoSprint)](https://poggit.pmmp.io/ci/AIPTU/NoSprint/NoSprint)
-[![](https://poggit.pmmp.io/shield.dl/NoSprint)](https://poggit.pmmp.io/p/NoSprint)
+[![GitHub License](https://img.shields.io/github/license/AIPTU/NoSprint.svg)](https://github.com/AIPTU/NoSprint/blob/master/LICENSE)
+[![Poggit State](https://poggit.pmmp.io/shield.state/NoSprint)](https://poggit.pmmp.io/p/NoSprint)
+[![Poggit Download Total](https://poggit.pmmp.io/shield.dl.total/NoSprint)](https://poggit.pmmp.io/p/NoSprint)
 
 A PocketMine-MP plugin to cancel the player's spint.
 
 # Features
 
-- Permissions bypass.
+- Permission bypass.
 - Custom messages.
 - Per world support.
 - Lightweight and open source ❤️
@@ -18,12 +18,15 @@ A PocketMine-MP plugin to cancel the player's spint.
 
 ```yaml
 ---
-# Message to be used when canceling a player's sprint
-# You can use "&" or "§" to color the message
+# Do not change this (Only for internal use)!
+config-version: 1
+
+# Message used when canceling a player's sprint
+# Use "§" or "&" to color the message
 message: "&cYou can't sprint in this world"
 
-# The name of the world folder that you want to cancel the player's sprint
-# Leave this blank if you don't want to cancel the player's sprint
+# List of world folder names to blacklist sprint.
+# Set it to [] if you want to sprint in all worlds.
 blacklisted-worlds:
   - "world"
 ...
@@ -31,7 +34,7 @@ blacklisted-worlds:
 
 # Permissions
 
-- Permission `nosprint.bypass` allows the user to bypass sprint.
+- Permission `nosprint.bypass` allows users to bypass sprint.
 
 # How to Install
 

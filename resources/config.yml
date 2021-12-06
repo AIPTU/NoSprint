@@ -1,10 +1,13 @@
 ---
-# Message to be used when canceling a player's sprint
-# You can use "&" or "§" to color the message
+# Do not change this (Only for internal use)!
+config-version: 1
+
+# Message used when canceling a player's sprint
+# Use "§" or "&" to color the message
 message: "&cYou can't sprint in this world"
 
-# The name of the world folder that you want to cancel the player's sprint
-# Leave this blank if you don't want to cancel the player's sprint
+# List of world folder names to blacklist sprint.
+# Set it to [] if you want to sprint in all worlds.
 blacklisted-worlds:
   - "world"
 ...
