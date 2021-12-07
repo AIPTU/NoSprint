@@ -1,6 +1,7 @@
 ---
 name: NoSprint
 main: aiptu\nosprint\NoSprint
+src-namespace-prefix: aiptu\nosprint
 version: 1.1.0
 api: [4.0.0]
 author: AIPTU

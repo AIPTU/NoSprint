@@ -6,8 +6,13 @@ config-version: 1
 # Use "§" or "&" to color the message
 message: "&cYou can't sprint in this world"
 
-# List of world folder names to blacklist sprint.
-# Set it to [] if you want to sprint in all worlds.
-blacklisted-worlds:
-  - "world"
+worlds:
+  # The mode can be either "blacklist" or "whitelist".
+  # Blacklist mode will cancel player's sprint according to predefined world folder names and will not cancel player's sprint in all worlds.
+  # Whitelist mode will only allow player's sprint according to predefined world folder names and will cancel player's sprint in all worlds.
+  mode: "blacklist"
+  # List of world folder names to blacklist/whitelist (depending on the mode set above).
+  # Set it to [] if you want to allow sprint in all worlds.
+  list:
+    - "world"
 ...

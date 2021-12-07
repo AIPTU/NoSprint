@@ -8,12 +8,18 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerToggleSprintEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
+use pocketmine\world\World;
 use function gettype;
 use function in_array;
 use function rename;
 
 final class NoSprint extends PluginBase implements Listener
 {
+	private const MODE_BLACKLIST = 0;
+	private const MODE_WHITELIST = 1;
+
+	private int $mode;
+
 	public function onEnable(): void
 	{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
@@ -29,7 +35,7 @@ final class NoSprint extends PluginBase implements Listener
 
 		$player = $event->getPlayer();
 
-		if (!in_array($player->getWorld()->getFolderName(), $this->getConfig()->getAll()['blacklisted-worlds'], true)) {
+		if (!$this->checkWorlds($player->getWorld())) {
 			return;
 		}
 
@@ -41,7 +47,7 @@ final class NoSprint extends PluginBase implements Listener
 			$player->setSprinting(false);
 		}
 
-		$player->sendMessage(TextFormat::colorize($this->getConfig()->get('message', "&cYou can't sprint in this world")));
+		$player->sendPopup(TextFormat::colorize($this->getConfig()->get('message', "&cYou can't sprint in this world")));
 		$event->cancel();
 	}
 
@@ -60,11 +66,26 @@ final class NoSprint extends PluginBase implements Listener
 
 		foreach ([
 			'message' => 'string',
-			'blacklisted-worlds' => 'array',
+			'worlds.list' => 'array',
 		] as $option => $expectedType) {
 			if (($type = gettype($this->getConfig()->getNested($option))) !== $expectedType) {
 				throw new \TypeError("Config error: Option ({$option}) must be of type {$expectedType}, {$type} was given");
 			}
 		}
+
+		match ($this->getConfig()->getNested('worlds.mode')) {
+			'blacklist' => $this->mode = self::MODE_BLACKLIST,
+			'whitelist' => $this->mode = self::MODE_WHITELIST,
+			default => throw new \InvalidArgumentException('Invalid mode selected, must be either "blacklist" or "whitelist"!'),
+		};
+	}
+
+	private function checkWorlds(World $world): bool
+	{
+		if ($this->mode === self::MODE_BLACKLIST) {
+			return !(in_array($world->getFolderName(), $this->getConfig()->getAll()['worlds']['list'], true));
+		}
+
+		return in_array($world->getFolderName(), $this->getConfig()->getAll()['worlds']['list'], true);
 	}
 }
