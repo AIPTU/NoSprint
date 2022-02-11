@@ -1,9 +1,8 @@
 # NoSprint
 
-[![Discord](https://img.shields.io/discord/830063409000087612?color=7389D8&label=discord)](https://discord.com/invite/EggNF9hvGv)
-[![GitHub License](https://img.shields.io/github/license/AIPTU/NoSprint.svg)](https://github.com/AIPTU/NoSprint/blob/master/LICENSE)
-[![Poggit State](https://poggit.pmmp.io/shield.state/NoSprint)](https://poggit.pmmp.io/p/NoSprint)
-[![Poggit Download Total](https://poggit.pmmp.io/shield.dl.total/NoSprint)](https://poggit.pmmp.io/p/NoSprint)
+[![](https://img.shields.io/discord/830063409000087612?color=7389D8&label=discord)](https://discord.com/invite/EggNF9hvGv)
+[![](https://poggit.pmmp.io/shield.state/NoSprint)](https://poggit.pmmp.io/p/NoSprint)
+[![](https://poggit.pmmp.io/shield.dl.total/NoSprint)](https://poggit.pmmp.io/p/NoSprint)
 
 A PocketMine-MP plugin to cancel the player's spint.
 
@@ -14,62 +13,40 @@ A PocketMine-MP plugin to cancel the player's spint.
 - Per world support.
 - Lightweight and open source ❤️
 
-# Config
+# Permissions
+
+- Permission `nosprint.bypass` allows users to bypass sprint.
+
+# Default Config
 
 ```yaml
 ---
 # Do not change this (Only for internal use)!
-config-version: 1
+config-version: 1.0
 
 # Message used when canceling a player's sprint
 # Use "§" or "&" to color the message
 message: "&cYou can't sprint in this world"
 
-# List of world folder names to blacklist sprint.
-# Set it to [] if you want to sprint in all worlds.
-blacklisted-worlds:
-  - "world"
+worlds:
+  # The mode can be either "blacklist" or "whitelist".
+  # Blacklist mode will cancel player's sprint according to predefined world folder names and will not cancel player's sprint in all worlds.
+  # Whitelist mode will only allow player's sprint according to predefined world folder names and will cancel player's sprint in all worlds.
+  mode: "blacklist"
+  # List of world folder names to blacklist/whitelist (depending on the mode set above).
+  # Set it to [] if you want to allow sprint in all worlds.
+  list:
+    - "world"
 ...
+
 ```
 
-# Permissions
+# Upcoming Features
 
-- Permission `nosprint.bypass` allows users to bypass sprint.
-
-# How to Install
-
-1. Download the plugin from [here](https://poggit.pmmp.io/p/NoSprint)
-2. Put the `NoSprint.phar` file into the `plugins` folder.
-3. Restart the server.
-4. Done!
+- Currently none planned. You can contribute or suggest for new features.
 
 # Additional Notes
 
-- If you find bugs or want to give suggestions, please visit [here](https://github.com/AIPTU/NoSprint/issues)
+- If you find bugs or want to give suggestions, please visit [here](https://github.com/AIPTU/NoSprint/issues).
+- We accept all contributions! If you want to contribute, please make a pull request in [here](https://github.com/AIPTU/NoSprint/pulls).
 - Icons made from [www.flaticon.com](https://www.flaticon.com)
-
-# License
-
-```
-MIT License
-
-Copyright (c) 2021 AIPTU
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
