@@ -1,6 +1,5 @@
 # NoSprint
 
-[![](https://img.shields.io/discord/830063409000087612?color=7389D8&label=discord)](https://discord.com/invite/EggNF9hvGv)
 [![](https://poggit.pmmp.io/shield.state/NoSprint)](https://poggit.pmmp.io/p/NoSprint)
 [![](https://poggit.pmmp.io/shield.dl.total/NoSprint)](https://poggit.pmmp.io/p/NoSprint)
 
@@ -22,7 +21,7 @@ A PocketMine-MP plugin to cancel the player's spint.
 ```yaml
 ---
 # Do not change this (Only for internal use)!
-config-version: 1.0
+config-version: 1.2
 
 # Message used when canceling a player's sprint
 # Use "§" or "&" to color the message

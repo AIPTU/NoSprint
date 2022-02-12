@@ -35,7 +35,7 @@ use function rename;
 
 final class NoSprint extends PluginBase
 {
-	private const CONFIG_VERSION = 1.0;
+	private const CONFIG_VERSION = 1.2;
 
 	private const MODE_BLACKLIST = 0;
 	private const MODE_WHITELIST = 1;

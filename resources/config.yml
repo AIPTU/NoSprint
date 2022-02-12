@@ -1,6 +1,6 @@
 ---
 # Do not change this (Only for internal use)!
-config-version: 1.0
+config-version: 1.2
 
 # Message used when canceling a player's sprint
 # Use "§" or "&" to color the message
