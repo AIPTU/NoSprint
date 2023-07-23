@@ -26,7 +26,7 @@ use function is_string;
 use function trim;
 
 class NoSprint extends PluginBase implements Listener {
-	private const CONFIG_VERSION = 1.2;
+	private const CONFIG_VERSION = 1.3;
 
 	private const MODE_NONE = 0;
 	private const MODE_BLACKLIST = 1;

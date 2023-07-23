@@ -25,7 +25,7 @@ A PocketMine-MP plugin to cancel the player's spint.
 
 ```yaml
 # Do not change this (Only for internal use)!
-config-version: 1.2
+config-version: 1.3
 
 # Message used when canceling a player's sprint.
 # You can use color codes by using "§" or "&" before the color code.
